@@ -115,11 +115,6 @@ function authorize(credentials, callback) {
       if (err) return console.log('The API returned an error: ' + err);
       const files = res.data.files;
       if (files.length) {
-        // console.log('Files:');
-        // files.map((file) => {
-        //   // console.log(file)
-        //   console.log(`${file.name} (${file.id})`);
-        // });
         return global.res.status(200).json({
           message: files,
           isSuccess: true
